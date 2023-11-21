@@ -1,6 +1,6 @@
-## Getting Started
+## WAB Intro to Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+My labs and assignments for Intro to Java course at Wroclaw Academy of Business.
 
 ## Folder Structure
 
