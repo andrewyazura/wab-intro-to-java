@@ -1,3 +1,8 @@
+// Name: Andrii Yatsura
+// Student ID: 19387
+// Course: Algorithms and Data Structures
+// University: Wroclaw Academy of Business
+
 package Semester_2.Assignment_02;
 
 import java.util.Random;
@@ -7,13 +12,11 @@ public class SortingExperiment {
     private static final int[] SIZES = { 100, 1000, 10000, 100000, 500000, 1000000 };
 
     public static void main(String[] args) {
-        // Generate random arrays
         Integer[][] arrays = new Integer[SIZES.length][];
         for (int i = 0; i < SIZES.length; i++) {
             arrays[i] = generateRandomArray(SIZES[i]);
         }
 
-        // Conduct experiments
         runExperiments(arrays);
     }
 
@@ -40,7 +43,6 @@ public class SortingExperiment {
 
             System.out.printf("%10d | %18d | %17d | %14d\n", array.length, insertionTime,
                     selectionTime, heapTime);
-            // System.out.printf("%10d | %14d\n", array.length, heapTime);
         }
     }
 
@@ -49,7 +51,7 @@ public class SortingExperiment {
         long startTime = System.nanoTime();
         PriorityQueueSort.priorityQueueSort(array, pq);
         long endTime = System.nanoTime();
-        return (endTime - startTime) / 1_000_000; // Convert to milliseconds
+        return (endTime - startTime) / 1_000_000;
     }
 
     private static long timeSelectionSort(Integer[] array) {
@@ -57,7 +59,7 @@ public class SortingExperiment {
         long startTime = System.nanoTime();
         PriorityQueueSort.priorityQueueSort(array, pq);
         long endTime = System.nanoTime();
-        return (endTime - startTime) / 1_000_000; // Convert to milliseconds
+        return (endTime - startTime) / 1_000_000;
     }
 
     private static long timeHeapSort(Integer[] array) {
@@ -65,6 +67,6 @@ public class SortingExperiment {
         long startTime = System.nanoTime();
         PriorityQueueSort.priorityQueueSort(array, pq);
         long endTime = System.nanoTime();
-        return (endTime - startTime) / 1_000_000; // Convert to milliseconds
+        return (endTime - startTime) / 1_000_000;
     }
 }
